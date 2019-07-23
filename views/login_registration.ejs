@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <% if(messages.registration) { %>
+            <% for (var x of messages.registration) { %>
+                <h3><%= x %></h3>
+            <% } %>
+        <% } %>
+    <h1>Register</h1>
+    <form method='post' action='/register'>
+        <p>First Name</p>
+        <input type='text' name='first_name'>
+        <p>Last Name</p>
+        <input type='text' name='last_name'>
+        <p>Birthday</p>
+        <input type="date" name="birthday">
+        <p>Email</p>
+        <input type='email' name='email'>
+        <p>Password</p>
+        <input type='password' name='password'>
+        <p>Confirm Password</p>
+        <input type="password" name="c_pw">
+        <button type="submit">Register!</button>
+    </form>  
+    <h1>Login</h1>
+    <form method='post' action='/login'>
+        <p>Email</p>
+        <input type='email' name='email'>
+        <p>Password</p>
+        <input type='password' name='password'>
+        <button type="submit">Login!</button>
+    </form>   
+</body>
+</html>
